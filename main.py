@@ -26,9 +26,21 @@ if __name__ == "__main__":
     #Gui version
     #main()
     
-    sys.exit(app.exec_())
+    screenWidth, screenHeight = pyautogui.size()
+    currentMouseX, currentMouseY = pyautogui.position()
+
+    try:
+        while 1:
+            var = input("enter p to exit:  ")
+            if var == 'p':
+                break
+            else:
+                print('test something')
+                mouse_movements()
+
+    except KeyboardInterrupt:
+            sys.exit()
+            raise
 
     #manual version
     #result = movements(True)
-    mouse_movements(True)
-    print(result)
